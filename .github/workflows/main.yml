@@ -11,6 +11,6 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
-        server: ftp.samkirkland.com
+        server: ftp.amanaska.org
         username: website_upload2@amanaska.org	
         password: ${{ secrets.ftp_password }}
