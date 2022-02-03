@@ -1,3 +1,29 @@
+---
+projects:
+  - image: img/past_projects/5.jpeg
+    title: Health Poverty Action
+    blurb: >
+      Contributions secured towards 
+      <a href="http://www.healthpovertyaction.org/on-the-ground/africa/sierra-leone/improving-maternal-health/">
+      an ongoing program to improve Maternal Health</a> in northern Bombabli, a rural area of in Sierra Leone 
+      which has some of the highest infant and maternal mortality rates in the country.
+  
+  - image: img/past_projects/6.jpeg
+    title: Project pencil case, Ethiopia
+    blurb: >
+      <a href="http://projectpencilcase.org/">Project Pencil Case</a> is a Small NGO in Addis Abbaba. Initially
+      granted funds to help provide basic school equipment for students in Addis Ababa and now receiving ongoing 
+      support towards their work with vocational training for young women.
+
+  - image: img/past_projects/7.jpeg
+    title: Lovin' Spoonfuls
+    blurb: >
+      Lovin’ spoonfuls,  based in Boston Masschusetts, rescues healthy fresh food that would otherwise be discarded 
+      and delivers it to community organisations and resources where it can have the greatest impact, feeding the 
+      people who need it.</p><p>They were awarded a grant from one of our funders towards the purchase of their new
+      distribution van.
+
+---
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -35,28 +61,15 @@
             </ol>
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
-              <div class="item active">
-                <img src="img/past_projects/5.jpeg" class="img-responsive">
+              {% for project in page.projects %}
+              <div class="item {% if forloop.first %}active{% endif %}">
+                <img src="{{ project.image }}" class="img-responsive">
                 <div class="carousel-caption">
-                  <h3>Health Poverty Action</h3>
-                  <p>Contributions secured towards <a href="http://www.healthpovertyaction.org/on-the-ground/africa/sierra-leone/improving-maternal-health/">an ongoing program to improve Maternal Health</a> in northern Bombabli, a rural area of in Sierra Leone which has some of the highest infant and maternal mortality rates in the country.</p>
+                  <h3>{{ project.title }}</h3>
+                  <p>{{ project.blurb }}</p>
                 </div>
               </div>
-              <div class="item">
-                <img src="img/past_projects/6.jpeg" class="img-responsive">
-                <div class="carousel-caption">
-                  <h3>Project pencil case, Ethiopia</h3>
-                  <p><a href="http://projectpencilcase.org/">Project Pencil Case</a> is a Small NGO in Addis Abbaba. Initially granted funds to help provide basic school equipment for students in Addis Ababa and now receiving ongoing support towards their work with vocational training for young women.</p>
-                </div>
-              </div>
-              <div class="item">
-                <img src="img/past_projects/7.jpeg" class="img-responsive" />
-                <div class="carousel-caption">
-                  <h3>Lovin' Spoonfuls</h3>
-                  <p>Lovin’ spoonfuls,  based in Boston Masschusetts, rescues healthy fresh food that would otherwise be discarded and delivers it to community organisations and resources where it can have the greatest impact, feeding the people who need it.</p>
-                  <p>They were awarded a grant from one of our funders towards the purchase of their new distribution van.</p>
-                </div>
-              </div>
+              {% endfor %}
             </div>
             <!-- Controls -->
             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
