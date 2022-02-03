@@ -1,5 +1,5 @@
 on: workflow_dispatch
-name: 🚀 Deploy website on push
+name: 🚀 Deploy website on demand
 jobs:
   web-deploy:
     name: 🎉 Deploy
@@ -8,6 +8,11 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
     
+    - name: 🔨 Build website
+      uses: helaili/jekyll-action@v2
+      with:
+        build_only: true
+
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
