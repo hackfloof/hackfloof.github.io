@@ -17,7 +17,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
         local-dir: build/
-        state-name: ./.sync-state.json
+        state-name: ../.sync-state.json
         server: ftp.amanaska.org
         username: website_upload2@amanaska.org	
         password: ${{ secrets.ftp_password }}
