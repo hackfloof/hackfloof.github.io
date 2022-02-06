@@ -19,5 +19,5 @@ jobs:
         local-dir: build/
         state-name: ../.sync-state.json
         server: ftp.amanaska.org
-        username: website_upload2@amanaska.org	
+        username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
