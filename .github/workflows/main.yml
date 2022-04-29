@@ -1,5 +1,5 @@
 on: workflow_dispatch
-name: 🚀 Deploy website on demand
+name: 🐩 Deploy website on demand
 jobs:
   web-deploy:
     name: 🎉 Deploy
