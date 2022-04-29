@@ -16,7 +16,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
-        local-dir: build/
+        local-dir: /github/jekyll_build
         state-name: ../.sync-state.json
         server: ftp.amanaska.org
         username: ${{ secrets.ftp_username }}
