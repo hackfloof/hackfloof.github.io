@@ -12,12 +12,12 @@ jobs:
       uses: helaili/jekyll-action@v2
       with:
         build_only: true
-        target_path: /github/workspace/build
+        target_path: ../workspace/build
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
-        local-dir: /github/workspace/build/
+        local-dir: build/
         state-name: ../.sync-state.json
         server: ftp.amanaska.org
         username: ${{ secrets.ftp_username }}
