@@ -25,11 +25,11 @@ ul.encouraged {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("../img/past-projects-bw.jpg");
+    background-image: url("../img/past-projects-bw-2.jpg");
     background-size: cover;
 }
 .past-projects-block:hover {
-    background-image: url("../img/past-projects.jpg");
+    background-image: url("../img/past-projects-2.jpg");
 }
 
 .fund-row-wrapper {
